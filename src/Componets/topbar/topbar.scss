@@ -6,8 +6,8 @@
     color: $mainColor;
     position: fixed;
     top: 0;
-    z-index: 2;
-    transition: all 2s ease;
+    z-index: 3;
+    transition: all 1s ease;
     
     .wrapper{
         padding: 10px 30px;
@@ -24,25 +24,34 @@
                 text-decoration: none;
                 color: inherit;
                 margin-right: 40px;
+                &:hover{
+                    font-weight: 500;
+                    color: $hoverColor;
+                }
              }
             .itemContainer{
                 display: flex;
                 align-items: center;
                 margin-left: 30px;
-                text-decoration: none;
                 
-                .icon{
-                    font-size: 18px;
-                    margin-right: 5px;
-                }
-                .href{
+                            
+                  a{
                     text-decoration: none;
-                    color: inherit;
+                    color: inherit;                     
+                    display: flex;  
+                    align-items: center;                   
+                    .icon{
+                        font-size: 25px;
+                        margin-right: 5px;
+                    }
+                    &:hover{
+                        font-weight: 800;
+                        color: $hoverColor;
+                    }
                 }
                 span{
                     font-size: 15px;
-                    font-weight: 700;
-                    
+                    font-weight: 700;         
                 }
 
             }
@@ -52,6 +61,7 @@
                 width: 32px;
                 height: 25px;
                 display: flex;
+                border-radius: 2px;
                 flex-direction: column;
                 justify-content: space-between;
                 cursor: pointer;
@@ -59,9 +69,10 @@
                 span{
                     width: 100%;
                     height: 2px;
+                    border-radius: 2px;
                     background-color: $mainColor;
                     transform-origin: left;
-                    transition: all 2s ease;
+                    transition: all 1s ease;
                 }
               
             }
