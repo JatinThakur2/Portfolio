@@ -9,7 +9,6 @@
         position: relative;
         top: 70px;
         scroll-behavior: smooth;
-        scroll-snap-type: mandatory;
         scrollbar-width: none;
         &::-webkit-scrollbar{
             display: none;
