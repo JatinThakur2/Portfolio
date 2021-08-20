@@ -43,17 +43,20 @@ export const ServicesPortfolio = [
   export const HobbiesPortfolio = [
     {
       id: 1,
-      title: "Mobile Social Media App",
+      title: "Drawing",
       span: "", },
     {
       id: 2,
-      title: "Mobile Rampa UI Design",
+      title: "Travelling",
       span: "", },
     {
       id: 3,
-      title: "Mobile E-commerce Design",
+      title: "Reading Books",
       span: "", },
-    
+      {
+        id: 3,
+        title: "Listing Music",
+        span: "", },
   ];
   
  
