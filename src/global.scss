@@ -1,2 +1,10 @@
 $mainColor: rgb(94, 94, 110) ;
 $hoverColor:rgba(32, 235, 250, 0.867);
+
+$width: 768px;
+
+@mixin mobile {
+    @media(max-width: #{$width}){
+        @content
+    }
+}
