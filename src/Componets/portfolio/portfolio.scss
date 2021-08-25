@@ -4,6 +4,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+   
 
     h1{
         font-size: 50px;
@@ -30,7 +31,7 @@
         width: 80%;
         display: flex;
         align-items: center;
-        justify-content: center;
+        justify-content: center;     
         flex-wrap: wrap;
         @include mobile{
             width: 100%;
@@ -39,12 +40,13 @@
 
         .item{
             width: 250px;
-            height: 400px;
+            height: 370px;
             border-radius: 20px;
             border: 1px solid aqua;
             margin: 10px 20px;
             justify-content: center;
             color: white;
+            
             position: relative;
             display: flex;
             flex-direction: column;
@@ -73,6 +75,7 @@
                 font-size: 20px;
                 text-align: center;
                 color: white;
+                opacity: 0;
                 @include mobile{
                     font-size: 10px;
         
@@ -81,7 +84,14 @@
 
            
             &:hover{
-                background-color: $mainColor;
+                background-color: aqua;
+                transform: scale(1.05);
+                
+                
+                span{
+                    opacity: 100;
+                }
+                
                 h3{
                     opacity: 0;
                     z-index: 0;

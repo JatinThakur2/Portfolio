@@ -3,6 +3,11 @@
 .intro{
     background-color: white;
     display: flex;
+    background-image: url("https://cdn.pixabay.com/photo/2015/11/02/18/33/banner-1018814_960_720.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    
 
     @include mobile{
         flex-direction: column;
