@@ -1,42 +1,53 @@
+import { useState } from "react";
 import "./works.scss"
 
 export default function Works() {
+    const [ currentSlide, setCurrentSlide] = useState(0)
 
     const data = [
         {
             id: 1,
+            icon: "./assets/writing.png",
             title: "Web Development",
-            span: "",
+            desc: "acdcasdcsdc sd casdc asdc asdc asd casd casd ",
+            img:"https://github.com/JatinThakur2/iTune/raw/master/Screenshot/Screenshot_2.jpg",
+            
         },
         {
             id: 2,
-            title: "Mobile Development",
-            span: "",
+            icon: "./assets/writing.png",
+            title: "Mobile",
+            desc: "acdcasdcsdc sd casdc asdc asdc asd casd casd ",
+            img:"https://github.com/JatinThakur2/iTune/raw/master/Screenshot/Screenshot_2.jpg",
         },
         {
             id: 3,
-            title: "Logo Designing",
-            span: "",
+            icon: "./assets/writing.png",
+            title: "Jatin",
+            desc: "acdcasdcsdc sd casdc asdc asdc asd casd casd ",
+            img:"https://github.com/JatinThakur2/iTune/raw/master/Screenshot/Screenshot_2.jpg",
         },
-        {
-            id: 4,
-            title: "IOT",
-            span: "",
-        },
+       
     ];
+    const handleClick = (way) => {
+        way === "left" ? setCurrentSlide(currentSlide > 0 ? currentSlide - 1 : 2) :
+            setCurrentSlide(currentSlide < data.length - 1 ? currentSlide + 1 : 0)
+    };
     return (
         <div className="works" id="works">
-            <div className="slider">
+            <h1>Projects</h1>
+            <div className="slider" style ={{transform: `translateX(-${currentSlide * 100}vw)` }}>
+                { data.map(d=>(
                 <div className="container">
                     <div className="item">
                         <div className="left">
                             <div className="leftContainer">
                                 <div className="imgContainer">
-                                    <img src ="assets/mobile.png" alt= "" />
+                                    <img src ={d.icon} alt= "" />
 
                                 </div>
-                                <h2>Jatin</h2>
-                                <p>oaidndncandc  lkalnldcj nadlcn  ak ncklan kdnca laknd ckna </p>
+                                <h2>{d.title}</h2>
+                                <p>{d.desc}</p>
                                 <span>Projects</span>
                         </div>
                         
@@ -46,10 +57,11 @@ export default function Works() {
                             <img src="https://github.com/JatinThakur2/iTune/raw/master/Screenshot/Screenshot_2.jpg" alt=""/>
                     </div>
                 </div>
+                    </div>
+                    ))}
             </div>
-            </div>
-            <img src="assets/arrow.png" className="arrow left" alt="" />
-            <img src ="assets/arrow.png" className="arrow right" alt=""/>
+            <img src="assets/arrow.png" className="arrow left" alt="" onClick={()=>handleClick("left")} />
+            <img src ="assets/arrow.png" className="arrow right" alt="" onClick={()=>handleClick()} />
             </div>
     )
 }
