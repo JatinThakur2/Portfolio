@@ -48,7 +48,7 @@
                 font-size: 14px;
                 border-radius: 5px;
                 margin: 5px 0;
-                
+                border: 0;
                 @include mobile{
                     width: 200px;
                     height: 20px;
@@ -60,6 +60,8 @@
                 height: 200px;
                 font-size: 14px;
                 border-radius: 5px;
+                resize: none;
+                border: 0;
                 @include mobile{
                     width: 200px;
                     height: 100px;
@@ -75,7 +77,11 @@
                 border-radius: 20px;
                 font-weight: 500;
                 cursor: pointer;
-                margin: 5px;
+                margin: 10px;
+                transition: all 70ms ease;
+                &:hover{
+                    transform: scale(1.1);
+                }
                 
 
                 &:focus{

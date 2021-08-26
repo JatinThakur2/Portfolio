@@ -8,23 +8,23 @@ export default function Works() {
         {
             id: 1,
             icon: "./assets/writing.png",
-            title: "Web Development",
-            desc: "acdcasdcsdc sd casdc asdc asdc asd casd casd ",
+            title: "Ecommerce Website",
+            desc: "Build a bookstore using Mern stack (React and MongoDB) where you can buy and sell the book and also have a chat option where you can ask your quarries about the product with admin or seller",
             img:"https://github.com/JatinThakur2/iTune/raw/master/Screenshot/Screenshot_2.jpg",
             
         },
         {
             id: 2,
             icon: "./assets/writing.png",
-            title: "Mobile",
-            desc: "acdcasdcsdc sd casdc asdc asdc asd casd casd ",
+            title: "Mobile Diagnosis App",
+            desc: "Build a mobile diagnosis app using java which can diagnose the mobile and give the report about all features are working properly or not.",
             img:"https://github.com/JatinThakur2/iTune/raw/master/Screenshot/Screenshot_2.jpg",
         },
         {
             id: 3,
             icon: "./assets/writing.png",
-            title: "Jatin",
-            desc: "acdcasdcsdc sd casdc asdc asdc asd casd casd ",
+            title: "Programable calculator",
+            desc: "Build a calculator using java and javafx which can calculate problem like 2x+3y as well as error terms easily.",
             img:"https://github.com/JatinThakur2/iTune/raw/master/Screenshot/Screenshot_2.jpg",
         },
        

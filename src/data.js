@@ -55,7 +55,7 @@ export const ServicesPortfolio = [
       span: "", },
       {
         id: 3,
-        title: "Listing Music",
+        title: "listening music",
         span: "", },
   ];
   
