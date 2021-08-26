@@ -8,13 +8,14 @@
 
     h1{
         font-size: 50px;
+        margin-top: 15px;
         @include mobile{
             font-style: 20px;
         }
     }
 
     ul{
-        margin: 10px;
+        margin: 10px 0;
         padding: 0;
         list-style: none;
         display: flex;
@@ -23,9 +24,6 @@
             justify-content: center;
 
         }
-       
-
-       
     }
     .container{
         width: 80%;
@@ -33,6 +31,7 @@
         align-items: center;
         justify-content: center;     
         flex-wrap: wrap;
+        margin-top: 20px;
         @include mobile{
             width: 100%;
 
