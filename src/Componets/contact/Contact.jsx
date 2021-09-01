@@ -1,8 +1,6 @@
 import "./contact.scss"
 import emailjs from "emailjs-com";
 
-
-
 export default function Contact() {
     function sendEmail(e) {
         e.preventDefault();
@@ -24,6 +22,7 @@ export default function Contact() {
             <div className="right">
                     <h2>Contact</h2>
             <form onSubmit={sendEmail}>
+
                             <input type="text" placeholder="Name" name="name"/>
                             <input type="email" placeholder="Email Address" name="email"/>
                             <input type="text" placeholder="Subject" name="subject"/> 

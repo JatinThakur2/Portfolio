@@ -15,13 +15,12 @@ export const ServicesPortfolio = [
       id: 4,
       title: "IOT",
       span: "", },
-   
   ];
   
   export const SkillPortfolio = [
     {
       id: 1,
-      title: "Web & Destop Development",
+      title: "Web & Desktop Development",
       span: "HTML & CSS,  React, JavaScript, Java, JavaFx, Python ", },
     {
       id: 2,
