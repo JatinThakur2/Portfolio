@@ -1,7 +1,33 @@
 import "./contact.scss"
+import Box from '@mui/material/Box';
+import TextField from '@mui/material/TextField';
+
+import React from 'react';
+import DialogActions from '@material-ui/core/DialogActions';
+import DialogContent from '@material-ui/core/DialogContent';
+import DialogTitle from '@material-ui/core/DialogTitle';
+import DialogContentText from '@material-ui/core/DialogContentText';
+import Dialog from '@material-ui/core/Dialog';
+import Button from '@material-ui/core/Button';
 import emailjs from "emailjs-com";
 
 export default function Contact() {
+    
+        const [value, setValue] = React.useState('');
+      
+        const handleChange = (event) => {
+          setValue(event.target.value);
+        };
+
+        const [open, setOpen] = React.useState(false);
+        
+        const handleClickOpen = () => {
+          setOpen(true);
+        };
+        
+        const handleClose = () => {
+          setOpen(false);
+        };
     function sendEmail(e) {
         e.preventDefault();
 
@@ -20,15 +46,36 @@ export default function Contact() {
             
             </div>
             <div className="right">
-                    <h2>Contact</h2>
-            <form onSubmit={sendEmail}>
-
+                <h2>Contact</h2>
+       
+            
+                <Box component="form"
+                    sx={{'& > :not(style)': { m: 1, width: '50ch',  }, }}
+                            noValidate
+                            autoComplete="off" onSubmit={sendEmail} >
+     
+                    <TextField id="outlined-basic" type="text" label="Name" variant="outlined" name="name" value={value} onChange={handleChange} />
+                    <TextField id="outlined-basic" type="email" label="Email Address" variant="outlined" name="email" />
+                    <TextField id="outlined-basic" type="text" label="Subject" variant="outlined" name="subject" />
+                    <TextField id="outlined-basic" multiline rows={4} type="text" label="Your message" variant="outlined" name="message" />
+{/* <form onSubmit={sendEmail} >
                             <input type="text" placeholder="Name" name="name"/>
                             <input type="email" placeholder="Email Address" name="email"/>
                             <input type="text" placeholder="Subject" name="subject"/> 
                             <textarea placeholder="Your message" name="message"></textarea>
-                            <button type="submit" className="btn" value="">Send Message</button>                       
-                </form>
+                              </form> */}
+                            <button type="submit" className="btn" value="" onClick={handleClickOpen} disabled={!value}>Send Message</button>                       
+                    <Dialog open={open} onClose={handleClose}>
+                        <DialogTitle> Thank You</DialogTitle>
+                        <DialogContent>
+                            <DialogContentText>For reaching out. I will reply soon</DialogContentText>
+                        </DialogContent>
+                        <DialogActions>
+                            <Button onClick={handleClose} color="primary" autoFocus>Close</Button>
+                        </DialogActions>
+                    </Dialog>
+              </Box>
+     
      
                 </div>
         </div>

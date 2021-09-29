@@ -53,8 +53,9 @@
     }
 
     .slider{
-        height: 350px;
+        height: 450px;
         display: flex;
+        margin-top: 60px;
         position: absolute;
         left: 0;
         transition: all 1s ease;
@@ -71,7 +72,7 @@
 
 
             .item{
-                width: 700px;
+                width: 800px;
                 height: 100%;
                 background-color: white;
                 border-radius: 20px;

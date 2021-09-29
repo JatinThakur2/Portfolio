@@ -80,12 +80,20 @@
         
                 }
             }
+            img{
+                position: relative;
+                opacity: 0; 
+                transition: all 1000ms ease;
+            }
 
            
             &:hover{
                 background-color: aqua;
                 transform: scale(1.05);
-                
+                img{
+                    opacity: 100;
+                    
+                }
                 
                 span{
                     opacity: 100;

@@ -23,6 +23,20 @@ export default function Works() {
         {
             id: 3,
             icon: "./assets/writing.png",
+            title: "School Management Portal",
+            desc: "Build a management portal for the Sikkim govt. in SIH 2020 by using Google drive as a database which automatically updates when the internet is connected to the system",
+            img:"https://github.com/JatinThakur2/iTune/raw/master/Screenshot/Screenshot_2.jpg",
+        },
+        {
+            id: 4,
+            icon: "./assets/writing.png",
+            title: "Network-based Brainstorming System",
+            desc: "Build a Network-based Brainstorming System using spring-boot and maven in which people can vote and create meeting schedule and upload there ideas and also can chat with other team members.",
+            img:"https://github.com/JatinThakur2/iTune/raw/master/Screenshot/Screenshot_2.jpg",
+        },
+        {
+            id: 5,
+            icon: "./assets/writing.png",
             title: "Programable calculator",
             desc: "Build a calculator using java and javafx which can calculate problem like 2x+3y as well as error terms easily.",
             img:"https://github.com/JatinThakur2/iTune/raw/master/Screenshot/Screenshot_2.jpg",
